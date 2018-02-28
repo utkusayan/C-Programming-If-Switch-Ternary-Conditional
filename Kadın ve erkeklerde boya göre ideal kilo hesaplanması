@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char cinsiyet;
+    printf("Cinsiyetinizi giriniz(e-k):");
+    scanf("%c",&cinsiyet);
+    float boy;
+    float kilo;
+    float erkekidealkilo;
+    float kadinidealkilo;
+    printf("Boyunuz (m):");
+    scanf("%f",&boy);
+    printf("Kilonuz(kg):");
+    scanf("%f",&kilo);
+    printf("--------------\n");
+    if(cinsiyet=='e')
+    {
+        erkekidealkilo=48+(2.7*((boy-1.50)*100.0/2.5));
+        printf("Ideal kilonuz :%.2f\n",erkekidealkilo);
+        if(kilo>erkekidealkilo)
+        {
+            printf("Ideal kilonuzdan daha agirsiniz.");
+        }
+        else if(kilo<erkekidealkilo)
+        {
+            printf("Ideal kilonuzdan daha hafifsiniz.");
+        }
+    }
+    else if(cinsiyet=='k')
+    {
+        kadinidealkilo=45+(2.2*((boy-1.50)*100/2.5));
+        printf("Ideal kilonuz :%.2f\n",kadinidealkilo);
+        if(kilo>kadinidealkilo)
+        {
+            printf("Ideal kilonuzdan daha agirsiniz.");
+        }
+        else if(kilo<kadinidealkilo)
+        {
+            printf("Ideal kilonuzdan daha hafifsiniz.");
+        }
+    }
+
+    return 0;
+}
