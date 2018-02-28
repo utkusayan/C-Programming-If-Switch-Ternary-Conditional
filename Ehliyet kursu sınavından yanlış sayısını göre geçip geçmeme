@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int trafikyanlis;
+    int motoryanlis;
+    int ilkyardimyanlis;
+    printf("Trafik yanlis sayisini giriniz    :");
+    scanf("%d",&trafikyanlis);
+    printf("Motor yanlis sayisini giriniz     :");
+    scanf("%d",&motoryanlis);
+    printf("Ilk yardim yanlis sayisini giriniz:");
+    scanf("%d",&ilkyardimyanlis);
+    printf("-------------------------------------\n");
+    float trafikpuani;
+    float motorpuani;
+    float ilkyardimpuani;
+    trafikpuani=100-(trafikyanlis*(100/50));
+    printf("Trafik puanininiz  :%.2f\n",trafikpuani);
+    motorpuani=100-(motoryanlis*(100.0/40.0));
+    printf("Motor puaniniz     :%.2f\n",motorpuani);
+    ilkyardimpuani=100-(ilkyardimyanlis*(100.0/30.0));
+    printf("Ilk yardim puaniniz:%.2f\n",ilkyardimpuani);
+    if(motorpuani>70&&ilkyardimpuani>70&&trafikpuani>70)
+    {
+        printf("Tebrikler direksiyon sinavina katilabilirsiniz");
+    }
+    else
+    {
+        printf("Uzgunuz direksiyon sinavina katilamazsiniz");
+
+    }
+    return 0;
+}
