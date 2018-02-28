@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int sayi;
+    printf("Lutfen bir sayi giriniz:");
+    scanf("%d",&sayi);
+    if(sayi>0)
+    {
+        printf("Sayi pozitiftir.");
+    }
+    else if(sayi<0)
+    {
+        printf("Sayi negatiftir.");
+    }
+    else
+        printf("Sayi 0 dir");
+    return 0;
+}
