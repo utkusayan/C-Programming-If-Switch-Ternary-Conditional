@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Araba Turleri\n");
+    printf("(A veya a) Arazi\n");
+    printf("(B veya b) Binek\n");
+    printf("(P veya p) Spor\n");
+    printf("-------------------\n");
+
+    char tur;
+    printf("Arabanin turunu giriniz =");
+    scanf("%c",&tur);
+    int gun;
+    printf("Arabayi kac gun kullandiniz =");
+    scanf("%d",&gun);
+    int km;
+    printf("Araba ile kac km yaptiniz =");
+    scanf("%d",&km);
+    int ucret;
+    switch(tur)
+    {
+    case 'A':
+    case 'a':
+        ucret=gun*20+km*18;
+        printf("Odemeniz gereken tutar:%d",ucret);
+        break;
+    case 'B':
+    case 'b':
+        ucret=gun*32+km*22;
+        printf("Odemeniz gereken tutar:%d",ucret);
+        break;
+    case 'P':
+    case 'p':
+        ucret=gun*51+km*36;
+        printf("Odemeniz gereken tutar:%d",ucret);
+        break;
+    default:
+        printf("Yanlis tur girdiniz!!");
+    }
+    return 0;
+}
