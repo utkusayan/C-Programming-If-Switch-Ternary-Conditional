@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float sure;
+    printf("Sureyi giriniz(saat)   = ");
+    scanf("%f",&sure);
+    if(sure<1)
+    {
+        printf("Borcunuz : 5TL");
+    }
+    else if(sure>=1&&sure<5)
+    {
+        printf("Borcunuz : 20TL");
+    }
+    else if(sure>=5&&sure<=10)
+    {
+        printf("Borcunuz : 40TL");
+    }
+
+    else if(sure>=11)
+    {
+        printf("Borcunuz : %.2f",40+(sure-10)*0.5);
+    }
+
+    return 0;
+}
