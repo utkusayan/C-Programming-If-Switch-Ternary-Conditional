@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int saat;
+    printf("Gunun saatini giriniz=");
+    scanf("%d",&saat);
+    printf("---------------------------\n");
+    if(saat<6)
+    {
+        printf("Iyi uykular\n");
+    }
+    else if(saat>=6&&saat<11)
+    {
+        printf("Gunaydin");
+    }
+    else if(saat>=11&&saat<17)
+    {
+        printf("Iyi gunler");
+    }
+    else if(saat>=17&&saat<22)
+    {
+        printf("Iyi aksamlar");
+    }
+    else if(saat>=22&&saat<24)
+    {
+        printf("Iyi geceler");
+    }
+
+    return 0;
+}
