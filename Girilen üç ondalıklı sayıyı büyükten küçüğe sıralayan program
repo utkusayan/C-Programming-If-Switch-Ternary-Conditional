@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x,y,z;
+    float yedek;
+    printf("Uc adet ondalikli sayi giriniz=");
+    scanf("%f%f%f",&x,&y,&z);
+    if(x<z)
+    {
+        yedek=x;
+        x=z;
+        z=yedek;
+    }
+    if(x<y)
+    {
+        yedek=x;
+        x=y;
+        y=yedek;
+    }
+    if(y<z)
+    {
+        yedek=y;
+        y=z;
+        z=yedek;
+    }
+
+    printf("Buyukten kucuge sirali hali=%.2f>%.2f>%.2f",x,y,z);
+
+    return 0;
+}
