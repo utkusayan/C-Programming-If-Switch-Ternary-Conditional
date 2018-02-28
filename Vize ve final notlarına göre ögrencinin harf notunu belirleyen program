@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int vize;
+    int finall;
+    char harf;
+    printf("Ogrencinin vize notu:");
+    scanf("%d",&vize);
+    printf("Ogrencinin final notu:");
+    scanf("%d",&finall);
+    float ortalama;
+    ortalama=vize*0.4+finall*0.6;
+    printf("Basarý ortalamasi:%.2f\n",ortalama);
+    if(ortalama<50)
+    {
+        harf='F';
+    }
+    else if(ortalama<60)
+    {
+        harf='D';
+    }
+    else if(ortalama<70)
+    {
+        harf='C';
+    }
+    else if(ortalama<80)
+    {
+        harf='B';
+    }
+    else
+    {
+        harf='A';
+    }
+    printf("Ogrencinin harf notu:%c",harf);
+
+    return 0;
+}
