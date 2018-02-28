@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char cinsiyet;
+    printf("Cocugun cinsiyetini giriniz:");
+    scanf("%c",&cinsiyet);
+    float erkekhedefboy;
+    float bababoy;
+    float anneboy;
+    float kizhedefboy;
+    printf("Babasinin boyu:");
+    scanf("%f",&bababoy);
+    printf("Annesinin boyu:");
+    scanf("%f",&anneboy);
+    printf("------------------\n");
+    erkekhedefboy=(anneboy+bababoy+0.13)/2.0;
+    kizhedefboy=(anneboy+bababoy-0.13)/2.0;
+    if(cinsiyet=='e')
+    {
+        printf("Hedef boy:%.2f\n",erkekhedefboy);
+        if(erkekhedefboy>1.75)
+        {
+            printf("Turkiye ortalamasindan daha uzun olacak.");
+        }
+        else if(erkekhedefboy<1.75)
+        {
+            printf("Turkiye ortalamasindan daha kisa olacak.");
+        }
+    }
+    else if(cinsiyet=='k')
+    {
+        printf("Hedef boy:%.2f\n",kizhedefboy);
+         if(kizhedefboy>1.75)
+        {
+            printf("Turkiye ortalamasindan daha uzun olacak.");
+        }
+        else if(kizhedefboy
+                <1.75)
+        {
+            printf("Turkiye ortalamasindan daha kisa olacak.");
+        }
+    }
+
+
+    return 0;
+}
