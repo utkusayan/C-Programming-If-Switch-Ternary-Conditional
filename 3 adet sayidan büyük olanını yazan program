@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float sayi1,sayi2,sayi3;
+    printf("Sayilari giriniz:");
+    scanf("%f %f %f",&sayi1,&sayi2,&sayi3);
+    float enbuyuk;
+    enbuyuk=sayi1;
+    if(sayi2>enbuyuk)
+    {
+        enbuyuk=sayi2;
+    }
+    else if(sayi3>enbuyuk)
+    {
+        enbuyuk=sayi3;
+    }
+    printf("Girilenlerin en buyugu : %.2f",enbuyuk);
+    return 0;
+}
