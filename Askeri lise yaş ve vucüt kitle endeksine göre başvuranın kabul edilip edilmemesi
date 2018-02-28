@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int yas;
+    int kilo;
+    float boy;
+    float VKI;
+    printf("Yasinizi giriniz: ");
+    scanf("%d",&yas);
+    printf("Kilosunu giriniz:");
+    scanf("%d",&kilo);
+    printf("Boyunuzu giriniz:");
+    scanf("%f",&boy);
+    VKI=kilo/(boy*boy);
+    printf("Vucut kutle indeksiniz:%.2f\n",VKI);
+    if(VKI<24.99&&VKI>18.50)
+    {
+        if(yas<17&&yas>13)
+        {
+            printf("Tebrikler askeri liseye girebilirsiniz.");
+        }
+        else
+        {
+            printf("Uzgunuz askeri liseye giremezsiniz.");
+        }
+    }
+    else
+    {
+        printf("Uzgunuz askeri liseye giremezsiniz.");
+    }
+
+
+
+    return 0;
+}
