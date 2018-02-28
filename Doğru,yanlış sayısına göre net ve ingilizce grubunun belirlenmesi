@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+//4 yanlis bir dogruyu goturur//
+int main()
+{
+    int dogru;
+    int yanlis;
+    float net;
+
+    printf("Dogru sayisini giriniz  =");
+    scanf("%d",&dogru);
+    printf("Yanlis sayisini giriniz =");
+    scanf("%d",&yanlis);
+
+    net=dogru-yanlis/4.0;
+    printf("---------------------------\n");
+    printf("Net sayisi :%.2f\n\n",net);
+    if(net<10)
+    {
+        printf("Kurunuz:Beginner");
+    }
+    else if(10>=net&&net<30)
+    {
+        printf("Kurunuz:Elementary");
+    }
+    else if(30>=net&&net<50)
+    {
+        printf("Kurunuz:Preintermediate");
+    }
+    else if(50>=net&&net<70)
+    {
+        printf("Kurunuz:Intermediate");
+    }
+    else if(net>=70)
+    {
+        printf("Kurunuz:Upper");
+    }
+
+
+    return 0;
+}
