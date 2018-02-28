@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int gelir;
+    printf("Brut aylik gelirinizi giriniz  :");
+    scanf("%d",&gelir);
+    printf("------------------------\n");
+    float yillik_gelir;
+    yillik_gelir=gelir*12;
+    printf("Toplam yillik geliriniz  :%.2f\n",yillik_gelir);
+    float vergi;
+    if(yillik_gelir<=10700)
+    {
+        vergi=yillik_gelir*15/100;
+        printf("Odemeniz gereken toplam vergi  :%.2f\n",vergi);
+    }
+    if(yillik_gelir>10700&&yillik_gelir<=26000)
+    {
+        vergi=1605+(yillik_gelir-10700)/5;
+        printf("Odemeniz gereken toplam vergi  :%.2f\n",vergi);
+    }
+    if(yillik_gelir>260000&&yillik_gelir<=94000)
+    {
+        vergi=4465+(yillik_gelir-26000)*27/100;
+        printf("Odemeniz gereken toplam vergi  :%.2f\n",vergi);
+    }
+    if(yillik_gelir>94000)
+    {
+        vergi=yillik_gelir*35/100;
+        printf("Odemeniz gereken toplam vergi  :%.2f\n",vergi);
+    }
+    float net_aylik_gelir;
+    net_aylik_gelir=(yillik_gelir-vergi)/12;
+    float kesilecek_vergi;
+    kesilecek_vergi=gelir-net_aylik_gelir;
+    printf("Her ay gelirinizden kesilecek vergi  :%.2f\n",kesilecek_vergi);
+    printf("Vergisi kesilmis net aylik geliriniz  :%.2f\n",net_aylik_gelir);
+
+
+    return 0;
+}
