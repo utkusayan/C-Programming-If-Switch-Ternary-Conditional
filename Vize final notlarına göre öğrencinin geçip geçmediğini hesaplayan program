@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int vize;
+    int finall;
+    printf("Vize notunu giriniz:");
+    scanf("%d",&vize);
+    printf("Final notunu giriniz:");
+    scanf("%d",&finall);
+    printf("---------------------\n");
+    float ortalama;
+    ortalama=vize*0.4+finall*0.6;
+    printf("Agirlikli ortalama=%.2f\n\n",ortalama);
+    if(ortalama>60)
+    {
+        printf("Ogrenci dersten gecti.\n\n");
+
+    }
+    else
+    {
+        printf("Ogrenci dersten kaldi.\n\n");
+    }
+
+    return 0;
+}
